@@ -30,7 +30,7 @@ const addOrderItems = async (req, res, next) => {
     }
 
     const order = new Order({
-      user: req.user._id,
+      user: req.user ? req.user._id : null, // Check if req.user exists
       orderItems: cartItems.map(item => ({
         ...item,
         product: item._id
