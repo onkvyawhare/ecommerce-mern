@@ -22,7 +22,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: "http://localhost:3000"
+  origin: "https://ecommerce-mern-ten-henna.vercel.app"
 }));
 
 app.use(compression());
